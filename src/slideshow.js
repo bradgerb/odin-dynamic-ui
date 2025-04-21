@@ -8,7 +8,7 @@ function plusSlides(n) {
 
 // Thumbnail image controls
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+    showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
@@ -28,14 +28,14 @@ function showSlides(n) {
 }
 
 const previousArrow = document.querySelector(".prev");
-previousArrow.addEventListener("click", plusSlides(-1));
+previousArrow.addEventListener("click", ()=>{plusSlides(-1)});
 
 const nextArrow = document.querySelector(".next");
-nextArrow.addEventListener("click", plusSlides(1));
+nextArrow.addEventListener("click", ()=>{plusSlides(1)});
 
 const dots = document.querySelectorAll(".dot");
 for (let i = 0; i < dots.length; i++){
     dots[i].addEventListener("click", ()=>{
-        currentSlide(i);
+        currentSlide(i+1);
     });
 }
