@@ -1,10 +1,14 @@
-const menuOne = document.querySelector(".dropdownButton");
-menuOne.addEventListener("click", dropdownToggle);
-
-function dropdownToggle() {
-    document.getElementById("menuOne").classList.toggle("show");
+const dropdownMenus = document.querySelectorAll(".dropdownButton");
+for (let i = 0; i < dropdownMenus.length; i++){
+    dropdownMenus[i].addEventListener("click", (e)=>{
+        dropdownToggle(e.target.id);
+    });
 }
 
+function dropdownToggle(menuID) {
+    let contentID = menuID + "Items";
+    document.getElementById(contentID).classList.toggle("show");
+}
 
 window.onclick = function(e) {
     if (!e.target.matches('.dropdownButton')) {
