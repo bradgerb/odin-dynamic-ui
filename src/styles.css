@@ -1,0 +1,21 @@
+body{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.slideshow{
+    background-color: peachpuff;
+}
+
+.dropdown ul{
+    margin: 0;
+    padding: 2px;
+    list-style: none;
+    border: solid black 1px;
+    background-color: lightgray;
+}
+
+.hovered{
+    background-color: grey;
+}
